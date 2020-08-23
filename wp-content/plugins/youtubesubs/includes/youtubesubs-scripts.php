@@ -7,6 +7,10 @@ function yts_add_scripts(){
     wp_enqueue_style('yts-main-style', plugins_url() . '/youtubesubs/css/style.css');
     // Add Main JS
     wp_enqueue_script('yts-main-script', plugins_url() . '/youtubesubs/js/main.js');
+
+    // Add google script
+    wp_register_script('google', 'https://apis.google.com/js/platform.js');
+    wp_enqueue_script('google');
 }
 
 // Hook to hook it to wordpress
